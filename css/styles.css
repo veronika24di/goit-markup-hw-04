@@ -17,10 +17,10 @@
     --hover-contacts-icon-color: #2196f3;
     --icon-bacground-color: #f5f4fa;
     --hover-bacground-color: #2196f3;
-  --hover-icon-color: #ffffff;
     --icon-color: #afb1b8;
     --footer-icon-color: #ffffff;
     --footer-title-color: #ffffff;
+    --hover-icon-color: #ffffff;
 }
 
 p,
@@ -194,10 +194,10 @@ body {
 }
 
 .overlay {
-    width: 1600px;
+    max-width: 1600px;
     height: 600px;
-    left: 0px;
-    top: 80px;
+    margin-left: auto;
+    margin-right: auto;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),
     rgba(47, 48, 58, 0.4)),
     url(../images/Img\ team.jpg);
@@ -282,8 +282,7 @@ body {
 }
 
 .features-item {
-    display: flex;
-    flex-direction: column;
+    width: 270px;
 }
 
 .features-icon{
@@ -291,7 +290,6 @@ body {
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
-    width: 270px;
     height: 120px;
     background: var(--icon-bacground-color);
     border-radius: 4px;
@@ -435,17 +433,17 @@ height: 44px;
     color: var(--icon-color);
 }
 
-.team-soc-icon{
-fill: currentColor;
-display: flex;
-}
-
-
-.team-soc-icon:hover,
-.team-soc-icon:focus{
+.team-soc-link:hover,
+.team-soc-link:focus{
     background-color: var(--hover-bacground-color);
     color: var(--hover-icon-color);
 }
+
+.team-soc-icon{
+fill: currentColor;
+}
+
+
 
 /*Client*/
 
@@ -470,10 +468,6 @@ border-radius: 4px;
 fill: var(--icon-color);
 }
 
-.client-icon{
-width: 106px;
-height: 60px;
-}
 
 .client-link:hover,
 .client-link:focus{
@@ -490,11 +484,12 @@ height: 60px;
 }
 
 .portfolio-element {
-    width: calc((100% - 60px) / 3);
+width: calc((100% - 60px) / 3);
 }
 
 .portfolio-link {
-    text-decoration: none;
+text-decoration: none;    
+display: block;
 }
 
 .portfolio-item {
@@ -519,8 +514,8 @@ height: 60px;
     color: var(--primary-text-color);
 }
 
-.portfolio-element:hover,
-.portfolio-element:focus {
+.portfolio-link:hover,
+.portfolio-link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
